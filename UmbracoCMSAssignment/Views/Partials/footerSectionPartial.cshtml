@@ -1,0 +1,13 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var headerLogo = Model?.Value<IPublishedContent>("headerImage")?.Url() ?? "";
+}
+
+<section id="footer">
+    <div class="container">
+        <span>© Onatrix. All Rights Reserved. Credits to<a> Themesflat</a></span>
+    </div>
+</section>
+
+

@@ -1,0 +1,170 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+	var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
+	var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
+
+	var serviceImage1 = Model?.Value<IPublishedContent>("serviceImage1")?.Url() ?? "";
+	var serviceImage2 = Model?.Value<IPublishedContent>("serviceImage2")?.Url() ?? "";
+	var serviceImage3 = Model?.Value<IPublishedContent>("serviceImage3")?.Url() ?? "";
+	var serviceImage4 = Model?.Value<IPublishedContent>("serviceImage4")?.Url() ?? "";
+	var serviceImage5 = Model?.Value<IPublishedContent>("serviceImage4")?.Url() ?? "";
+	var serviceImage6 = Model?.Value<IPublishedContent>("serviceImage6")?.Url() ?? "";
+
+	var statisticsImage = Model?.Value<IPublishedContent>("statisticsImage")?.Url() ?? "";
+
+	var storyImage = Model?.Value<IPublishedContent>("storyImage")?.Url() ?? "";
+
+
+
+}
+
+
+<section id="section-hero" class="hero">
+	<img class="background" src="@backgroundImage"</img>
+
+	<div class="container">
+		<div class="hero-content">
+			<h1 class="headline">@Model?.Value("heroHeadline")</h1>
+			<p class="ingress">@Model?.Value("heroText")</p>
+			<div>
+				<a href="@Model?.Value("heroButtonUrl")" class="btn-primary btn">@Model?.Value("heroButtonText")</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="section-about" class="about-us">
+	<div class="container">
+		<div class="content">
+
+			<div class="about-us">
+				<div class="headline">
+					<h5>@Model?.Value("aboutSectionTitle")</h5>
+					<h2>@Model?.Value("aboutHeadline")</h2>
+				</div>
+
+				<blockquote class="quote">@Model?.Value("aboutQuote")</blockquote>
+				<p>@Model?.Value("aboutText")</p>
+
+				<div class="signature-container">
+					<div class="signature">
+						<img class="signature-image" src="@signatureImage" alt="@Model.Value("aboutSignature")">
+						<div class="clarification">
+							<p class="name">@Model?.Value("aboutSignature")<a> CEO & Founder</a></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="form-container">
+				<h2>@Model?.Value("formHeadline")</h2>
+				<div class="container">
+					<p>@Model?.Value("formText")</p>
+					<form>
+						<input placeholder="Name" />
+						<input placeholder="Email address" />
+						<input placeholder="Phone" />
+						<select>
+							<option value="Financial consulting">Financial consulting</option>
+							<option value="Option 2">Option 2</option>
+							<option value="Option 3">Option 3</option>
+							<option value="Option 4">Option 4</option>
+						</select>
+						<button type="submit">@Model?.Value("formButton")</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section> 
+
+
+<section id="section-our-services">
+	<div class="container">
+
+		<h5>@Model?.Value("servicesTitle")</h5>
+		<h2>@Model?.Value("servicesHeadline")</h2>
+
+		<div class="service-grid">
+			<div class="service">
+				<h3>@Model?.Value("serviceTitle1")</h3>
+				<img src="@serviceImage1" />
+				<p>@Model?.Value("serviceText1")</p>
+
+			</div>
+			<div class="service">
+				<h3>@Model?.Value("serviceTitle2")</h3>
+				<img src="@serviceImage2" />
+				<p>@Model?.Value("serviceText2")</p>
+
+			</div>
+			<div class="service">
+				<h3>@Model?.Value("serviceTitle3")</h3>
+				<img src="@serviceImage3" />
+				<p>@Model?.Value("serviceText3")</p>
+
+			</div>
+			<div class="service">
+				<h3>@Model?.Value("serviceTitle4")</h3>
+				<img src="@serviceImage4" />
+				<p>@Model?.Value("serviceText4")</p>
+
+			</div>
+			<div class="service">
+				<h3>@Model?.Value("serviceTitle5")</h3>
+				<img src="@serviceImage5" />
+				<p>@Model?.Value("serviceText5")</p>
+
+			</div>
+			<div class="service">
+				<h3>@Model?.Value("serviceTitle6")</h3>
+				<img src="@serviceImage6" />
+				<p>@Model?.Value("serviceText6")</p>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<section id="section-statistics">
+	<div class="container">
+		<h2 id="first">@Model?.Value("statisticsHeadline")</h2>
+		<h2>@Model?.Value("statisticsAmount")</h2>
+		<p>@Model?.Value("statisticsText")</p>
+		<a>@Model?.Value("statisticsButton")</a>
+		<img src="@statisticsImage" />
+	</div>
+</section>
+
+<section id="section-success-story">
+	<h5>@Model?.Value("storyTitle1")</h5>
+	<h2>@Model?.Value("storyTitle2")</h2>
+
+	<div class="numbers-container">
+		<div class="numbers">
+			<span>@Model?.Value("number1")</span>
+			<p>@Model?.Value("numberText1")</p>
+		</div>
+
+		<div class="numbers">
+			<span>@Model?.Value("number2")</span>
+			<p>@Model?.Value("numberText2")</p>
+		</div>
+
+		<div class="numbers">
+			<span>@Model?.Value("number3")</span>
+			<p>@Model?.Value("numberText3")</p>
+		</div>
+	</div>
+	<img src="@storyImage" />
+</section>
+
+
+
+

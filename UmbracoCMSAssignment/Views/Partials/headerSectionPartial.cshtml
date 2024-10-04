@@ -1,0 +1,51 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var headerLogo = Model?.Value<IPublishedContent>("headerImage")?.Url() ?? "";
+}	
+    
+
+<section id="section-header-top">
+    <div class="container">
+
+        <div class="header-top">
+            
+            <div class="header-address">
+                <span>Klarabergsviadukten 90, 111 64 Stockholm</span>
+            </div>
+
+                <div class="header-socials">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div> 
+        </div>
+
+    </div>
+
+</section> 
+
+<section id="section-header-bottom">
+    <div class="container">
+        <div class="header-bottom">
+            <div class="image-header">
+                <img src="@headerLogo" />
+            </div>
+
+            <div class="navigation-links">
+                <a>About</a>
+                <a>Services</a>
+                <a>Projects</a>
+                <a>Contact</a>
+            </div>
+            
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
