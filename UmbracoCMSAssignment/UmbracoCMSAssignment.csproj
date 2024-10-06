@@ -8,6 +8,9 @@
     <Content Remove="compilerconfig.json" />
   </ItemGroup>
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\contact.min.css" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="compilerconfig.json" />
   </ItemGroup>
 

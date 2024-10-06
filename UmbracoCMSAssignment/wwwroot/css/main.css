@@ -313,10 +313,88 @@
   bottom: -25%;
 }
 
+#section-projects {
+  margin-top: 20rem;
+  margin-bottom: 5rem;
+}
+#section-projects .container {
+  display: flex;
+  flex-direction: column;
+  text-indent: 100px;
+  margin-bottom: 2rem;
+}
+#section-projects .container h5 {
+  color: #D9C3A9;
+  font-weight: 700;
+}
+#section-projects .container h2 {
+  color: #4F5955;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+#section-projects .projects-display {
+  display: flex;
+}
+#section-projects .projects-display .box {
+  height: 480px;
+  background-color: red;
+  position: relative;
+}
+#section-projects .projects-display .box .box-text {
+  position: absolute;
+  background-color: rgba(79, 89, 85, 0.6);
+  width: 100%;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+#section-projects .projects-display .box .box-text .text-container span {
+  color: white;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+#section-projects .projects-display .box .box-text .text-container p {
+  color: white;
+}
+#section-projects .projects-display .box .box-text div i {
+  color: white;
+  font-size: 3rem;
+  visibility: hidden;
+}
+#section-projects .projects-display .box .box-text:hover {
+  height: 150px;
+  background-color: rgb(79, 89, 85);
+  cursor: pointer;
+}
+#section-projects .projects-display .box .box-text:hover .text-container span {
+  color: #D9C3A9;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+#section-projects .projects-display .box .box-text:hover .text-container p {
+  color: white;
+}
+#section-projects .projects-display .box .box-text:hover div i {
+  color: white;
+  font-size: 3rem;
+  visibility: visible;
+}
+
+#section-partners {
+  margin-bottom: 4rem;
+}
+#section-partners .container .content {
+  display: flex;
+  justify-content: space-evenly;
+}
 #footer {
   background-color: black;
   bottom: 0;
   position: relative;
+  padding: 2rem 0rem;
 }
 #footer span {
   color: #535656;

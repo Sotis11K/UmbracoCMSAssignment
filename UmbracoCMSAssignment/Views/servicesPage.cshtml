@@ -1,0 +1,81 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+
+	var solutionsImage1 = Model?.Value<IPublishedContent>("solutionsImage3")?.Url() ?? "";
+	var solutionsImage2 = Model?.Value<IPublishedContent>("solutionsImage2")?.Url() ?? "";
+	var solutionsImage3 = Model?.Value<IPublishedContent>("solutionsImage1")?.Url() ?? "";
+	var solutionsImage4 = Model?.Value<IPublishedContent>("solutionsImage4")?.Url() ?? "";
+	var solutionsImage5 = Model?.Value<IPublishedContent>("solutionsImage5")?.Url() ?? "";
+	var solutionsImage6 = Model?.Value<IPublishedContent>("solutionsImage6")?.Url() ?? "";
+
+
+}
+
+<section id="section-services">
+	<div class="content">
+		<h1>@Model?.Value("servicesHeadline")</h1>
+		<div class="navigation-container">
+			<a href="/">Home</a>
+			<p id="arrow">></p>
+			<p>@Model?.Value("servicesNavigation")</p>
+		</div>
+	</div>
+</section>
+
+
+<section id="section-solutions">
+	<div class="container">
+		<div class="content">
+			<h2>@Model?.Value("solutionsHeadline")</h2>
+			<div class="solutions-grid">
+				<div>
+					<h3>@Model?.Value("solutionsTitle1")</h3>
+					<img src="@solutionsImage1"/>
+					<p>@Model?.Value("solutionsText1")</p>
+				</div>
+
+				<div>
+					<h3>@Model?.Value("solutionsTitle2")</h3>
+					<img src="@solutionsImage2"/>
+					<p>@Model?.Value("solutionsText2")</p>
+				</div>
+
+				<div>
+					<h3>@Model?.Value("solutionsTitle3")</h3>
+					<img src="@solutionsImage3" />
+					<p>@Model?.Value("solutionsText3")</p>
+				</div>
+
+				<div>
+					<h3>@Model?.Value("solutionsTitle4")</h3>
+					<img src="@solutionsImage4" />
+					<p>@Model?.Value("solutionsText4")</p>
+				</div>
+
+				<div>
+					<h3>@Model?.Value("solutionsTitle5")</h3>
+					<img src="@solutionsImage5" />
+					<p>@Model?.Value("solutionsText5")</p>
+				</div>
+
+				<div>
+					<h3>@Model?.Value("solutionsTitle6")</h3>
+					<img src="@solutionsImage6" />
+					<p>@Model?.Value("solutionsText6")</p>
+				</div>
+			</div>
+
+			<div class="pagination">
+				<span>Prev</span>
+				<span>1</span>
+				<span>2</span>
+				<span>Next</span>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+@await Html.PartialAsync("letUsKnowAboutYourProject")

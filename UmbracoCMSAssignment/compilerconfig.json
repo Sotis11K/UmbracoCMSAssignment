@@ -2,5 +2,29 @@
   {
     "outputFile": "wwwroot/css/main.css",
     "inputFile": "wwwroot/css/main.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/about.css",
+    "inputFile": "wwwroot/css/about.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/services.css",
+    "inputFile": "wwwroot/css/services.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/contact.css",
+    "inputFile": "wwwroot/css/contact.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/riskManagement.css",
+    "inputFile": "wwwroot/css/riskManagement.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/ourProjects.css",
+    "inputFile": "wwwroot/css/ourProjects.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/annualreport.css",
+    "inputFile": "wwwroot/css/annualreport.scss"
   }
 ]

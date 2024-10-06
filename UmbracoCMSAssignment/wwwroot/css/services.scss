@@ -1,0 +1,114 @@
+#section-services {
+    background-color: #F7F7F7;
+    padding: 3rem 0rem;
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            color: #4F5955;
+            font-weight: 700
+        }
+
+        .navigation-container {
+            display: flex;
+            gap: 0.8rem;
+
+            a {
+                color: black;
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+
+            #arrow {
+                color: black;
+            }
+
+            p {
+                font-weight: 600;
+                color: #D9C3A9;
+            }
+        }
+    }
+}
+
+#section-solutions {
+    margin-bottom: 4rem;
+
+    .content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        h2 {
+            color: #4F5955;
+            font-weight: 700;
+            font-size: 2.8rem;
+            width: 610px;
+            margin-bottom: 3rem;
+            margin-top: 5rem;
+        }
+
+        .solutions-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+
+            div {
+                border: solid 1px #EAEAEA;
+
+                h3 {
+                    padding-left: 2rem;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    font-size: 1.5rem;
+                    color: #4F5955;
+                    font-weight: 600;
+                }
+
+                p {
+                    padding-left: 2rem;
+                    width: 370px;
+                    padding-right: 1rem;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    color: #4F5955;
+                }
+            }
+        }
+
+
+        .pagination {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+
+            span {
+                padding: 1rem 1.5rem;
+
+                &:first-child {
+                    color: #EAEAEA;
+                }
+
+                &:nth-child(2) {
+                    border: solid 1px #EAEAEA;
+                    border-radius: 50%;
+                }
+
+                &:hover {
+                   cursor: pointer;
+                   text-decoration: underline;
+                }
+            }
+        }
+    }
+}

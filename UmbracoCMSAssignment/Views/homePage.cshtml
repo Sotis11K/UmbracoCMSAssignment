@@ -18,13 +18,28 @@
 
 	var storyImage = Model?.Value<IPublishedContent>("storyImage")?.Url() ?? "";
 
+	var partner1 = Model?.Value<IPublishedContent>("sponsor1")?.Url() ?? "";
+	var partner2 = Model?.Value<IPublishedContent>("sponsor2")?.Url() ?? "";
+	var partner3 = Model?.Value<IPublishedContent>("sponsor3")?.Url() ?? "";
+	var partner4 = Model?.Value<IPublishedContent>("sponsor4")?.Url() ?? "";
+	var partner5 = Model?.Value<IPublishedContent>("sponsor5")?.Url() ?? "";
+	var partner6 = Model?.Value<IPublishedContent>("sponsor6")?.Url() ?? "";
+
+	var boxImage1 = Model?.Value<IPublishedContent>("projectsBoxImage1")?.Url() ?? "";
+	var boxImage2 = Model?.Value<IPublishedContent>("projectsBoxImage2")?.Url() ?? "";
+	var boxImage3 = Model?.Value<IPublishedContent>("projectsBoxImage3")?.Url() ?? "";
+	var boxImage4 = Model?.Value<IPublishedContent>("projectsBoxImage4")?.Url() ?? "";
+
+
+
+
 
 
 }
 
 
 <section id="section-hero" class="hero">
-	<img class="background" src="@backgroundImage"</img>
+	<img class="background" src="@backgroundImage" />
 
 	<div class="container">
 		<div class="hero-content">
@@ -165,6 +180,82 @@
 	<img src="@storyImage" />
 </section>
 
+
+<section id="section-projects">
+	<div class="container">
+		<h5>@Model?.Value("projectsTitle")</h5>
+		<h2>@Model?.Value("projectsHeadline")</h2>
+	</div>
+
+	<div class="projects-display">
+		<div class="box">
+			<img src="@boxImage1"/>
+			<div class="box-text">
+				<div class="text-container">
+					<span>@Model?.Value("projectsBoxTitle1")</span>
+					<p>@Model?.Value("projectsBoxCategory1")</p>
+				</div>
+				<div>
+					<i class="fa-solid fa-arrow-right"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="box">
+			<img src="@boxImage2" />
+			<div class="box-text">
+				<div class="text-container">
+					<span>@Model?.Value("projectsBoxTitle2")</span>
+					<p>@Model?.Value("projectsBoxCategory2")</p>
+				</div>
+				<div>
+					<i class="fa-solid fa-arrow-right"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="box">
+			<img src="@boxImage3" />
+			<div class="box-text">
+				<div class="text-container">
+					<span>@Model?.Value("projectsBoxTitle3")</span>
+					<p>@Model?.Value("projectsBoxCategory3")</p>
+				</div>
+				<div>
+					<i class="fa-solid fa-arrow-right"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="box">
+			<img src="@boxImage4" />
+			<div class="box-text">
+				<div class="text-container">
+					<span>@Model?.Value("projectsBoxTitle4")</span>
+					<p>@Model?.Value("projectsBoxCategory4")</p>
+				</div>
+				<div>
+					<i class="fa-solid fa-arrow-right"></i>
+				</div>
+			</div>
+		</div>
+
+		
+	</div>
+</section>
+
+<section id="section-partners">
+	<div class="container">
+		<div class="content">
+			<img src="@partner1" />
+			<img src="@partner2" />
+			<img src="@partner3" />
+			<img src="@partner4" />
+			<img src="@partner5" />
+			<img src="@partner6" />
+		</div>
+	</div>
+</section>
 
 
 

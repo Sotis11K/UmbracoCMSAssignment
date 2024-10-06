@@ -1,0 +1,141 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+
+	var aboutUsManagementImage = Model?.Value<IPublishedContent>("aboutUsManagementImage")?.Url() ?? "";
+
+	var financialPlanImage = Model?.Value<IPublishedContent>("financialPlanImage")?.Url() ?? "";
+	var riskManagementImage = Model?.Value<IPublishedContent>("riskManagementImage")?.Url() ?? "";
+
+	var projectImage1 = Model?.Value<IPublishedContent>("projectImage1")?.Url() ?? "";
+	var projectImage2 = Model?.Value<IPublishedContent>("projectImage2")?.Url() ?? "";
+	var projectImage3 = Model?.Value<IPublishedContent>("projectImage3")?.Url() ?? "";
+	var projectImage4 = Model?.Value<IPublishedContent>("projectImage4")?.Url() ?? "";
+
+}
+
+<section id="section-our-projects">
+	<div class="content">
+		<h1>@Model?.Value("ourProjectsHeadline")</h1>
+		<div class="navigation-container">
+			<a href="/">Home</a>
+			<p id="arrow">></p>
+			<p href="/services">@Model?.Value("ourProjectsProjects")</p>
+		</div>
+	</div>
+</section>
+
+<section id="section-projects-list">
+	<div class="container">
+
+		<div class="project-list">
+			<div class="project">
+				<img src="@projectImage1" />
+				<div class="project-text">
+					<h4>@Model?.Value("projectHeadline1")</h4>
+					<div class="date-container">
+						<i class="fa-solid fa-calendar-days"></i>
+						<span>@Model?.Value("projectDate1")</span>
+					</div>
+					<p>@Model?.Value("projectText1")</p>
+					<div>
+						<a>Read more</a>
+						<i class="fa-solid fa-arrow-right"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="project">
+				<img src="@projectImage2" />
+				<div class="project-text">
+					<h4>@Model?.Value("projectHeadline2")</h4>
+					<div class="date-container">
+						<i class="fa-solid fa-calendar-days"></i>
+						<span>@Model?.Value("projectDate2")</span>
+					</div>
+					<p>@Model?.Value("projectText2")</p>
+					<div>
+						<a>Read more</a>
+						<i class="fa-solid fa-arrow-right"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="project">
+				<img src="@projectImage3" />
+				<div class="project-text">
+					<h4>@Model?.Value("projectHeadline3")</h4>
+					<div class="date-container">
+						<i class="fa-solid fa-calendar-days"></i>
+						<span>@Model?.Value("projectDate3")</span>
+					</div>
+					<p>@Model?.Value("projectText3")</p>
+					<div>
+						<a>Read more</a>
+						<i class="fa-solid fa-arrow-right"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="project">
+				<img src="@projectImage4" />
+				<div class="project-text">
+					<h4>@Model?.Value("projectHeadline4")</h4>
+					<div class="date-container">
+						<i class="fa-solid fa-calendar-days"></i>
+						<span>@Model?.Value("projectDate4")</span>
+					</div>
+					<p>@Model?.Value("projectText4")</p>
+					<div>
+						<a>Read more</a>
+						<i class="fa-solid fa-arrow-right"></i>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="pagination">
+				<span>Prev</span>
+				<span>1</span>
+				<span>2</span>
+				<span>Next</span>
+			</div>
+		</div>
+		<div class="tags-list">
+			<h3>@Model?.Value("projectTagsTitle")</h3>
+			<div>
+				<p>@Model?.Value("projectTagsTagReport")</p>
+				<p>@Model?.Value("projectTagsTagBuisnesplans")</p>
+			</div>
+
+			<div>
+				<p>@Model?.Value("projectTagsTagInsights")</p>
+				<p>@Model?.Value("projectTagsTagBusiness")</p>
+				<p>@Model?.Value("projectTagsTagApp")</p>
+			</div>
+
+			<div>
+				<p>@Model?.Value("projectTagsTagProject")</p>
+				<p>@Model?.Value("projectTagsTagFinance")</p>
+			</div>
+
+			<div>
+				<p>@Model?.Value("projectTagsTagPricing")</p>
+			</div>
+
+			<div class="email-ticket">
+				<h3>@Model?.Value("emailTicketTitle")</h3>
+				<p>@Model?.Value("emailTicketText")</p>
+				<div class="icon-mail">
+					<input />
+					<i class="fa-regular fa-envelope"></i>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+@await Html.PartialAsync("letUsKnowAboutYourProject")

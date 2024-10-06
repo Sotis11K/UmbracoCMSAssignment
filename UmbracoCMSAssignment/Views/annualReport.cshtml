@@ -1,0 +1,52 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+
+	var reportListImage = Model?.Value<IPublishedContent>("reportListImage")?.Url() ?? "";
+
+}
+
+<section id="section-annual-report">
+	<div class="content">
+		<h1>@Model?.Value("annualReportHeadline")</h1>
+		<div class="navigation-container">
+			<a href="/">Home</a>
+			<p id="arrow">></p>
+			<a href="/services">@Model?.Value("annualReportNavigation1")</a>
+			<p id="arrow">></p>
+			<p href="/services">@Model?.Value("annualReportNavigation2")</p>
+		</div>
+	</div>
+</section>
+
+
+<section id="annual-report">
+	<div class="container">
+
+
+		<div class="date-container">
+			<i class="fa-solid fa-calendar-days"></i>
+			<span>@Model?.Value("reportListDate")</span>
+		</div>
+		<h4>@Model?.Value("reportListHeadline")</h4>
+		<img src="@reportListImage" />
+		<h3>@Model?.Value("reportSuggestionHeadline")</h3>
+		<div>
+			<i class="fa-solid fa-circle"></i>
+			<p>@Model?.Value("reportSuggestionText1")</p>
+		</div>
+
+		<div>
+			<i class="fa-solid fa-circle"></i>
+			<p>@Model?.Value("reportSuggestionText2")</p>
+		</div>
+
+		<div>
+			<i class="fa-solid fa-circle"></i>
+			<p>@Model?.Value("reportSuggestionText3")</p>
+		</div>
+
+	</div>
+
+</section>

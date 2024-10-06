@@ -1,0 +1,248 @@
+#section-risk-management{
+    background-color: #F7F7F7;
+    padding: 3rem 0rem;
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            color: #4F5955;
+            font-weight: 700
+        }
+
+        .navigation-container {
+            display: flex;
+            gap: 0.8rem;
+
+            a {
+                color: black;
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+
+            #arrow {
+                color: black;
+            }
+
+            p {
+                font-weight: 600;
+                color: #D9C3A9;
+            }
+        }
+    }
+}
+
+
+#section-management-description {
+    margin-top: 5rem;
+
+    .container {
+        .content {
+            display: flex;
+            gap: 6rem;
+
+
+            .about-us-management {
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+
+                h4 {
+                    color: #4F5955;
+                    font-weight: 600;
+                    margin-bottom: 1.5rem;
+                }
+
+                img {
+                    margin-bottom: 1.5rem;
+                }
+
+                p {
+                    color: #535656;
+                }
+
+                .support-ticket {
+                    margin-top: 2rem;
+                    background-color: #4F5955;
+                    padding: 2rem 2rem;
+                    border-radius: 4px;
+
+                    h4 {
+                        color: #F2EDDC;
+                    }
+
+                    p {
+                        color: white;
+                    }
+
+                    .icon-mail {
+                        position: relative;
+
+                        i {
+                            position: absolute;
+                            right: 10px;
+                            padding: 0.75rem 0rem;
+                        }
+
+                        input {
+                            width: 100%;
+                            border-radius: 5px;
+                            outline: none;
+                            border: none;
+                            height: 40px;
+                            text-indent: 20px;
+                        }
+                    }
+                }
+            }
+
+            .risk-management {
+                padding: 0rem 5rem;
+                border-left: solid #ECECEC 1px;
+
+                img {
+                    width: 767px;
+                    margin-bottom: 3rem;
+                }
+
+                .keypoint {
+                    h3 {
+                        color: #4F5955;
+                        font-weight: 700;
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+
+                        i {
+                            position: absolute;
+                            color: #D9C3A9;
+                            font-size: 5px;
+                            top: 10px;
+                        }
+
+                        p {
+                            padding: 0 1rem;
+                        }
+                    }
+                }
+
+                .financial-plan {
+                    margin-top: 1rem;
+
+                    h3 {
+                        margin-bottom: 1rem;
+                        color: #4F5955;
+                        font-weight: 700;
+                    }
+
+                    p {
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+
+                        i {
+                            position: absolute;
+                            color: #D9C3A9;
+                            font-size: 5px;
+                            top: 10px;
+                        }
+
+                        p {
+                            padding: 0 1rem;
+                        }
+                    }
+                }
+
+                .financial-confidence {
+                    h3 {
+                        margin-bottom: 1rem;
+                        color: #4F5955;
+                        font-weight: 700;
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+
+                        i {
+                            position: absolute;
+                            color: #D9C3A9;
+                            font-size: 5px;
+                            top: 10px;
+                        }
+
+                        p {
+                            padding: 0 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .question-form {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+            margin-bottom: 15rem;
+            position: relative;
+
+            h3 {
+                margin-bottom: 1rem;
+                color: #4F5955;
+                font-weight: 700;
+            }
+
+            form {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                flex-wrap: wrap;
+                height: 200px;
+                justify-content: space-between;
+
+                input {
+                    width: 48%;
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 175px;
+                    max-height: 280px;
+                }
+
+                input, textarea {
+                    border: solid 1px #EBEBEB;
+                    font-style: italic;
+                    padding: 1rem 2rem;
+                    border-radius: 4px;
+                }
+
+                button {
+                    border-radius: 4px;
+                    background-color: #4F5955;
+                    color: #F2EDDC;
+                    padding: 1rem 3rem;
+                    border: solid 1px #4F5955;
+                }
+            }
+        }
+    }
+}

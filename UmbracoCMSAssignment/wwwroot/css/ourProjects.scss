@@ -1,0 +1,211 @@
+#section-our-projects {
+    background-color: #F7F7F7;
+    padding: 3rem 0rem;
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            color: #4F5955;
+            font-weight: 700
+        }
+
+        .navigation-container {
+            display: flex;
+            gap: 0.8rem;
+
+            a {
+                color: black;
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+
+            #arrow {
+                color: black;
+            }
+
+            p {
+                font-weight: 600;
+                color: #D9C3A9;
+            }
+        }
+    }
+}
+
+
+#section-projects-list {
+    margin-bottom: 7rem;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .project {
+                display: flex;
+                gap: 2rem;
+                padding: 0rem 0rem;
+                align-items: center;
+                padding: 1rem 0;
+                border-bottom: #ECECEC 1px solid;
+
+                &:nth-child(4) {
+                    border: none;
+                }
+
+                img {
+                }
+
+                .project-text {
+                    h4 {
+                        color: #4F5955;
+                        font-weight: 600;
+                    }
+
+                    .date-container {
+                        margin-bottom: 1.5rem;
+
+                        i {
+                            color: #9C9EA6;
+                        }
+
+                        span {
+                            color: #9C9EA6;
+                        }
+                    }
+
+                    div {
+                        margin-bottom: 1.5rem;
+
+                        i {
+                            color: #D9C3A9;
+                        }
+
+                        span {
+                            color: #9C9EA6;
+                        }
+                    }
+
+                    p {
+                        color: #535656;
+                        width: 380px;
+                    }
+
+                    a {
+                        font-weight: 600;
+                        color: #535656;
+                    }
+                }
+            }
+
+
+            .pagination {
+                display: flex;
+                margin-top: 4rem;
+
+                span {
+                    color: black;
+                    padding: 0.5rem 1rem;
+                    font-weight: 600;
+
+                    &:first-child {
+                        color: #EAEAEA;
+                    }
+
+                    &:nth-child(2) {
+                        padding: 0.5rem 1rem;
+                        border: solid 1px #EAEAEA;
+                        border-radius: 50%;
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .tags-list {
+        display: flex;
+        flex-direction: column;
+        border-left: solid 1px #ECECEC;
+        padding-left: 3rem;
+
+        h3 {
+            color: #4F5955;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        div {
+            display: flex;
+            gap: 1rem;
+
+            p {
+                padding: 0.5rem 1rem;
+                border-radius: 2rem;
+                border: solid 1px #E6E6E6;
+                color: #4F5955;
+
+                &:hover {
+                    background-color: #E6E6E6;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        .email-ticket {
+            margin-top: 3rem;
+            background-color: #4F5955;
+            padding: 2rem 2rem;
+            border-radius: 4px;
+            flex-direction: column;
+
+            h3 {
+                color: #F2EDDC;
+            }
+
+            p {
+                color: white;
+            }
+
+            .icon-mail {
+                position: relative;
+
+                i {
+                    position: absolute;
+                    right: 10px;
+                    padding: 0.75rem 0rem;
+                }
+
+                input {
+                    width: 100%;
+                    border-radius: 5px;
+                    outline: none;
+                    border: none;
+                    height: 40px;
+                    text-indent: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+

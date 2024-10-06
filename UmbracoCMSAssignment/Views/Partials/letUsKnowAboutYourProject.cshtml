@@ -1,0 +1,45 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var yourProjectMan = Model?.Value<IPublishedContent>("yourProjectImage")?.Url() ?? "";
+}
+
+<section class="section-yourProject">
+    <div class="container">
+        <div class="content">
+            <img src="@yourProjectMan" />
+            <div class="your-project-text">
+                <h2>@Model?.Value("yourProjectHeadline")</h2>
+                <div>
+                    <div class="icon-holder">
+                        <i class="fa-solid fa-location-pin"></i>
+                    </div>
+                    <div class="text-holder">
+                        <span>@Model?.Value("yourProjectLocationHeadline")</span>
+                        <p>@Model?.Value("yourProjectLocationAddress")</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="icon-holder">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="text-holder">
+                        <span>@Model?.Value("yourProjectPhoneNumberHeadline")</span>
+                        <p>@Model?.Value("yourProjectPhoneNumberNumber")</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="icon-holder">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="text-holder">
+                        <span>@Model?.Value("yourProjectEmailHeadline")</span>
+                        <p>@Model?.Value("yourProjectEmailEmailAddress")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

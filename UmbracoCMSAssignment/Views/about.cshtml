@@ -1,0 +1,131 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+	var summeryImage = Model?.Value<IPublishedContent>("summeryImage")?.Url() ?? "";
+
+	var trustedImage = Model?.Value<IPublishedContent>("trustedImage")?.Url() ?? "";
+
+	var employeesImage1 = Model?.Value<IPublishedContent>("employeesImage1")?.Url() ?? "";
+	var employeesImage2 = Model?.Value<IPublishedContent>("employeesImage2")?.Url() ?? "";
+	var employeesImage3 = Model?.Value<IPublishedContent>("employeesImage3")?.Url() ?? "";
+	var employeesImage4 = Model?.Value<IPublishedContent>("employeesImage4")?.Url() ?? "";
+	var employeesImage5 = Model?.Value<IPublishedContent>("employeesImage5")?.Url() ?? "";
+	var employeesImage6 = Model?.Value<IPublishedContent>("employeesImage6")?.Url() ?? "";
+	var employeesImage7 = Model?.Value<IPublishedContent>("employeesImage7")?.Url() ?? "";
+
+}
+
+
+
+<section id="section-about-us">
+	<div class="content">
+		<h1>@Model?.Value("aboutUsHeadline")</h1>
+		<div class="navigation-container">
+			<a href="/">Home</a>
+			<p id="arrow">></p>
+			<p>@Model?.Value("aboutUsNavigation")</p>
+		</div>
+	</div>
+</section>
+
+<section id="section-summery">
+	<div class="container">
+		<div class="summery-image">
+			<img src="@summeryImage" /> 
+			<span>@Model?.Value("summeryWriter")</span> 
+		</div>
+		<div class="summery-text">
+			<p class="quote">@Model?.Value("summeryQuote")</p> 
+			<p class="text">@Model?.Value("summeryText1")</p>
+			<p class="text">@Model?.Value("summeryText2")</p>
+			<p class="text">@Model?.Value("summeryText3")</p>
+			<p class="text">@Model?.Value("summeryText4")</p>
+			<p class="text">@Model?.Value("summeryText5")</p>
+			<p class="text">@Model?.Value("summeryText6")</p>
+			<p class="text">@Model?.Value("summeryText7")</p>
+
+		</div>
+	</div>
+</section>
+
+<section id="section-trusted">
+	<div class="content">
+		<div class="trusted-text">
+			<div class="inner-content">
+				<span class="title">@Model?.Value("trustedTitle")</span>
+				<h2>@Model?.Value("trustedHeadline")</h2>
+				<p>@Model?.Value("trustedText")</p>
+				<div class="reviews">
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+				</div>
+				<span>@Model?.Value("trustedWriter")</span>
+				<span>@Model?.Value("trustedSource")</span>
+			</div>
+		</div>
+		<img src="@trustedImage" />
+	</div>
+</section>
+
+<section id="section-employees">
+	<div class="container">
+		<div class="text">
+			<h5>@Model?.Value("employeesTitle")</h5>
+			<h2>@Model?.Value("employeesHeadline")</h2>
+		</div>
+		<div class="employees1">
+			<div >
+				<img src="@employeesImage1" />
+				<span>@Model?.Value("employeesName1")</span>
+				<p>@Model?.Value("employeesJob1")</p>
+			</div>
+
+			<div>
+				<img src="@employeesImage2" />
+				<span>@Model?.Value("employeesName2")</span>
+				<p>@Model?.Value("employeesJob2")</p>
+			</div>
+
+			<div>
+				<img src="@employeesImage3" />
+				<span>@Model?.Value("employeesName3")</span>
+				<p>@Model?.Value("employeesJob3")</p>
+			</div>
+		</div>
+		<div class="employees2">
+			<div>
+				<img src="@employeesImage4" />
+				<span>@Model?.Value("employeesName4")</span>
+				<p>@Model?.Value("employeesJob4")</p>
+			</div>
+
+			<div>
+				<img src="@employeesImage5" />
+				<span>@Model?.Value("employeesName5")</span>
+				<p>@Model?.Value("employeesJob5")</p>
+			</div>
+
+			<div>
+				<img src="@employeesImage6" />
+				<span>@Model?.Value("employeesName6")</span>
+				<p>@Model?.Value("employeesJob6")</p>
+			</div>
+
+			<div>
+				<img src="@employeesImage7" />
+				<span>@Model?.Value("employeesName7")</span>
+				<p>@Model?.Value("employeesJob7")</p>
+			</div>
+		</div>
+
+
+	</div>
+</section>
+
+@await Html.PartialAsync("letUsKnowAboutYourProject")

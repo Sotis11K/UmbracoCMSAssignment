@@ -1,0 +1,130 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+
+	var aboutUsManagementImage = Model?.Value<IPublishedContent>("aboutUsManagementImage")?.Url() ?? "";
+
+	var financialPlanImage = Model?.Value<IPublishedContent>("financialPlanImage")?.Url() ?? "";
+	var riskManagementImage = Model?.Value<IPublishedContent>("riskManagementImage")?.Url() ?? "";
+
+}
+
+<section id="section-risk-management">
+	<div class="content">
+		<h1>@Model?.Value("riskManagementTitle")</h1>
+		<div class="navigation-container">
+			<a href="/">Home</a>
+			<p id="arrow">></p>
+			<a href="/services">@Model?.Value("riskManagementNavgiation1")</a>
+			<p id="arrow">></p>
+			<p>@Model?.Value("riskManagementNavgiation2")</p>
+		</div>
+	</div>
+</section>
+
+<section id="section-management-description">
+	<div class="container">
+		<div class="content">
+			<div class="about-us-management">
+				<h4>@Model?.Value("aboutUsManagementHeadline")</h4>
+				<img src="@aboutUsManagementImage"/>
+				<p>@Model?.Value("aboutUsManagementText")</p>
+
+				<div class="support-ticket">
+					<h4>@Model?.Value("supportTicketHeadline")</h4>
+					<p>@Model?.Value("supportTicketText")</p>
+					<div class="icon-mail">
+						<input placeholder="E-mail address" />
+						<i class="fa-regular fa-envelope"></i>
+					</div>
+				</div>
+			</div>
+			<div class="risk-management">
+				<img src="@riskManagementImage"/>
+
+				<div class="keypoint">
+					<h3>@Model?.Value("keyPointHeadline")</h3>
+					<div>
+						<i class="fa-solid fa-circle"></i>
+						<p>@Model?.Value("keyPointText1")</p>
+
+					</div>
+
+					<div>
+						<i class="fa-solid fa-circle"></i>
+						<p>@Model?.Value("keyPointText2")</p>
+
+					</div>
+
+					<div>
+						<i class="fa-solid fa-circle"></i>
+						<p>@Model?.Value("keyPointText3")</p>
+
+					</div>
+				</div>
+
+				<div class="financial-plan">
+					<h3>@Model?.Value("financialPlanHeadline")</h3>
+					<p>@Model?.Value("financialPlanText1")</p>
+					<p>@Model?.Value("financialPlanText2")</p>
+					<p>@Model?.Value("financialPlanText3")</p>
+					<div>
+						<i class="fa-solid fa-circle"></i>
+						<p>@Model?.Value("financialPlanText4")</p>
+					</div>
+
+					<div>
+						<i class="fa-solid fa-circle"></i>
+						<p>@Model?.Value("financialPlanText5")</p>
+					</div>
+
+					<div>
+						<i class="fa-solid fa-circle"></i>
+						<p>@Model?.Value("financialPlanText6")</p>
+					</div>
+					<p>@Model?.Value("financialPlanText7")</p>
+					<p>@Model?.Value("financialPlanText8")</p>
+					<img src="@financialPlanImage" />
+				</div>
+		
+
+				<div class="financial-confidence">
+					<h3>@Model?.Value("financialConfidenceHeadline")</h3>
+					<p>@Model?.Value("financialConfidenceText1")</p>
+					<div>
+						<i class="fa-solid fa-circle"></i>
+						<p>@Model?.Value("financialConfidenceText2")</p>
+					</div>
+
+					<div>
+						<i class="fa-solid fa-circle"></i>
+						<p>@Model?.Value("financialConfidenceText3")</p>
+					</div>
+
+					<div>
+						<i class="fa-solid fa-circle"></i>
+						<p>@Model?.Value("financialConfidenceText4")</p>
+					</div>
+
+					<div>
+						<i class="fa-solid fa-circle"></i>
+						<p>@Model?.Value("financialConfidenceText5")</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="question-form">
+			<h3>Have a question ?</h3>
+			<form>
+				<input placeholder="Name"/>
+				<input placeholder="Email"/>
+				<textarea placeholder="Question"></textarea>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+</section>
+
+
+@await Html.PartialAsync("letUsKnowAboutYourProject")
