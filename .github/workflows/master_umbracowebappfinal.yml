@@ -53,4 +53,4 @@ jobs:
           app-name: 'umbracoWebAppFinal'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C184A358315646528E6A6501D451C66B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D3C7BEB501624FE88D38C14B579EC3EC }}
