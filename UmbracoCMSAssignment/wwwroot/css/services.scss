@@ -66,6 +66,14 @@
             div {
                 border: solid 1px #EAEAEA;
 
+                a {
+                    color: #4F5955;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
                 h3 {
                     padding-left: 2rem;
                     padding-top: 1rem;
@@ -105,8 +113,8 @@
                 }
 
                 &:hover {
-                   cursor: pointer;
-                   text-decoration: underline;
+                    cursor: pointer;
+                    text-decoration: underline;
                 }
             }
         }

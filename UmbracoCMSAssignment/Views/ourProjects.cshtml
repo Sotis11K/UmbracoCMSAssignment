@@ -33,16 +33,18 @@
 			<div class="project">
 				<img src="@projectImage1" />
 				<div class="project-text">
-					<h4>@Model?.Value("projectHeadline1")</h4>
-					<div class="date-container">
-						<i class="fa-solid fa-calendar-days"></i>
-						<span>@Model?.Value("projectDate1")</span>
-					</div>
-					<p>@Model?.Value("projectText1")</p>
-					<div>
-						<a>Read more</a>
-						<i class="fa-solid fa-arrow-right"></i>
-					</div>
+					<a href="/annualreport">
+						<h4>@Model?.Value("projectHeadline1")</h4>
+						<div class="date-container">
+							<i class="fa-solid fa-calendar-days"></i>
+							<span>@Model?.Value("projectDate1")</span>
+						</div>
+						<p>@Model?.Value("projectText1")</p>
+						<div>
+							<a>Read more</a>
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
+					</a>
 				</div>
 			</div>
 

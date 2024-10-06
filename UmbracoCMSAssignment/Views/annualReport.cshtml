@@ -5,6 +5,17 @@
 
 	var reportListImage = Model?.Value<IPublishedContent>("reportListImage")?.Url() ?? "";
 
+	var textInterruptImage = Model?.Value<IPublishedContent>("textInterruptImage")?.Url() ?? "";
+	
+	var bigText1Image = Model?.Value<IPublishedContent>("bigText1Image")?.Url() ?? "";
+
+	var recentProjectsBoxImage1 = Model?.Value<IPublishedContent>("recentProjectsBoxImage1")?.Url() ?? "";
+	var recentProjectsBoxImage2 = Model?.Value<IPublishedContent>("recentProjectsBoxImage2")?.Url() ?? "";
+	var recentProjectsBoxImage3 = Model?.Value<IPublishedContent>("recentProjectsBoxImage3")?.Url() ?? "";
+	var recentProjectsBoxImage4 = Model?.Value<IPublishedContent>("recentProjectsBoxImage4")?.Url() ?? "";
+
+
+	
 }
 
 <section id="section-annual-report">
@@ -13,9 +24,9 @@
 		<div class="navigation-container">
 			<a href="/">Home</a>
 			<p id="arrow">></p>
-			<a href="/services">@Model?.Value("annualReportNavigation1")</a>
+			<a href="/our-projects">@Model?.Value("annualReportNavigation1")</a>
 			<p id="arrow">></p>
-			<p href="/services">@Model?.Value("annualReportNavigation2")</p>
+			<p>@Model?.Value("annualReportNavigation2")</p>
 		</div>
 	</div>
 </section>
@@ -25,28 +36,152 @@
 	<div class="container">
 
 
-		<div class="date-container">
-			<i class="fa-solid fa-calendar-days"></i>
-			<span>@Model?.Value("reportListDate")</span>
-		</div>
-		<h4>@Model?.Value("reportListHeadline")</h4>
-		<img src="@reportListImage" />
-		<h3>@Model?.Value("reportSuggestionHeadline")</h3>
-		<div>
-			<i class="fa-solid fa-circle"></i>
-			<p>@Model?.Value("reportSuggestionText1")</p>
+		<div class="report-content">
+
+			<div class="date-container">
+				<i class="fa-solid fa-calendar-days"></i>
+				<span>@Model?.Value("reportListDate")</span>
+			</div>
+			<h4>@Model?.Value("reportListHeadline")</h4>
+			<img src="@reportListImage" />
+			<h3>@Model?.Value("reportSuggestionHeadline")</h3>
+			<div>
+				<i class="fa-solid fa-circle"></i>
+				<p>@Model?.Value("reportSuggestionText1")</p>
+			</div>
+
+			<div>
+				<i class="fa-solid fa-circle"></i>
+				<p>@Model?.Value("reportSuggestionText2")</p>
+			</div>
+
+			<div>
+				<i class="fa-solid fa-circle"></i>
+				<p>@Model?.Value("reportSuggestionText3")</p>
+			</div>
+
+
+			<div class="text-interrupt">
+				<img src="@textInterruptImage" />
+				<div>
+					<h3>@Model?.Value("textInterruptHeadline")</h3>
+					<p>@Model?.Value("textInterruptText1")</p>
+					<p>@Model?.Value("textInterruptText2")</p>
+				</div>
+			</div>
+
+			<div class="big-text1">
+				<h3>@Model?.Value("bigText1Headline")</h3>
+				<p>@Model?.Value("bigText1Text1")</p>
+				<p>@Model?.Value("bigText1Text2")</p>
+				<p>@Model?.Value("bigText1Text3")</p>
+				<img src="@bigText1Image" />
+			</div>
+
+			<div class="big-text2">
+				<h3>@Model?.Value("bigText2Headline")</h3>
+				<p>@Model?.Value("bigText2Text1")</p>
+				<p>@Model?.Value("bigText2Text2")</p>
+				<p>@Model?.Value("bigText2Text3")</p>
+			</div>
+
+
+			<div class="article-tags">
+				<span>@Model?.Value("articleTagsTitle")</span>
+				<span>@Model?.Value("articleTagsBubbleBusiness")</span>
+				<span>@Model?.Value("articleTagsBubbleConsulting")</span>
+				<span>@Model?.Value("articleTagsBubbleOnatrix")</span>
+			</div>
+			
 		</div>
 
-		<div>
-			<i class="fa-solid fa-circle"></i>
-			<p>@Model?.Value("reportSuggestionText2")</p>
-		</div>
 
-		<div>
-			<i class="fa-solid fa-circle"></i>
-			<p>@Model?.Value("reportSuggestionText3")</p>
-		</div>
 
+
+		<div class="side-bar">
+			<div class="recent-projects">
+				<h3>@Model?.Value("recentProjectsHeadline")</h3>
+				<div class="recent-project-box">
+					<img src="@recentProjectsBoxImage1"/>
+					<div>
+						<h4>@Model?.Value("recentProjectsBoxTitle1")</h4>
+						<div>
+							<i class="fa-solid fa-calendar-days"></i>
+							<span>@Model?.Value("recentProjectsBoxDate1")</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="recent-project-box">
+					<img src="@recentProjectsBoxImage2"/>
+					<div>
+						<h4>@Model?.Value("recentProjectsBoxTitle2")</h4>
+						<div>
+							<i class="fa-solid fa-calendar-days"></i>
+							<span>@Model?.Value("recentProjectsBoxDate2")</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="recent-project-box">
+					<img src="@recentProjectsBoxImage3"/>
+					<div>
+						<h4>@Model?.Value("recentProjectsBoxTitle3")</h4>
+						<div>
+							<i class="fa-solid fa-calendar-days"></i>
+							<span>@Model?.Value("recentProjectsBoxDate3")</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="recent-project-box">
+					<img src="@recentProjectsBoxImage4" />
+					<div>
+						<h4>@Model?.Value("recentProjectsBoxTitle4")</h4>
+						<div>
+							<i class="fa-solid fa-calendar-days"></i>
+							<span>@Model?.Value("recentProjectsBoxDate4")</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tags-list">
+				<h3>@Model?.Value("tagsHeadline")</h3>
+				<div>
+					<p>@Model?.Value("tagsBubbleReport")</p>
+					<p>@Model?.Value("tagsBubbleBusinesPlans")</p>
+				</div>
+
+				<div>
+					<p>@Model?.Value("tagsBubbleInsights")</p>
+					<p>@Model?.Value("tagsBubbleBusiness")</p>
+					<p>@Model?.Value("tagsBubbleApp")</p>
+				</div>
+
+				<div>
+					<p>@Model?.Value("tagsBubbleProject")</p>
+					<p>@Model?.Value("tagsBubbleFinance")</p>
+				</div>
+
+				<div>
+					<p>@Model?.Value("tagsBubblePricing")</p>
+				</div>
+
+				<div class="email-ticket">
+					<h3>@Model?.Value("emailTicketTitel")</h3>
+					<p>@Model?.Value("emailTicketText")</p>
+					<div class="icon-mail">
+						<input placeholder="Email address"/>
+						<i class="fa-regular fa-envelope"></i>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
 	</div>
-
 </section>
+
+
+@await Html.PartialAsync("letUsKnowAboutYourProject")

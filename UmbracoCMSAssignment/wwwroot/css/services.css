@@ -58,6 +58,13 @@
 #section-solutions .content .solutions-grid div {
   border: solid 1px #EAEAEA;
 }
+#section-solutions .content .solutions-grid div a {
+  color: #4F5955;
+  text-decoration: none;
+}
+#section-solutions .content .solutions-grid div a:hover {
+  text-decoration: underline;
+}
 #section-solutions .content .solutions-grid div h3 {
   padding-left: 2rem;
   padding-top: 1rem;

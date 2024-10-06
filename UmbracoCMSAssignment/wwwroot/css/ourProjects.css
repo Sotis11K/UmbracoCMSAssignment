@@ -57,6 +57,12 @@
 #section-projects-list .container .project-list .project:nth-child(4) {
   border: none;
 }
+#section-projects-list .container .project-list .project .project-text a {
+  text-decoration: none;
+}
+#section-projects-list .container .project-list .project .project-text a:hover {
+  text-decoration: underline;
+}
 #section-projects-list .container .project-list .project .project-text h4 {
   color: #4F5955;
   font-weight: 600;

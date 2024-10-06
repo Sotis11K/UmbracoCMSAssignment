@@ -107,12 +107,13 @@
 		<h2>@Model?.Value("servicesHeadline")</h2>
 
 		<div class="service-grid">
-			<div class="service">
-				<h3>@Model?.Value("serviceTitle1")</h3>
-				<img src="@serviceImage1" />
-				<p>@Model?.Value("serviceText1")</p>
-
-			</div>
+				<div class="service">
+					<a href="/riskmanagement">
+						<h3>@Model?.Value("serviceTitle1")</h3>
+					</a>
+						<img src="@serviceImage1" />
+						<p>@Model?.Value("serviceText1")</p>
+				</div>
 			<div class="service">
 				<h3>@Model?.Value("serviceTitle2")</h3>
 				<img src="@serviceImage2" />
@@ -187,20 +188,22 @@
 		<h2>@Model?.Value("projectsHeadline")</h2>
 	</div>
 
+
 	<div class="projects-display">
 		<div class="box">
 			<img src="@boxImage1"/>
-			<div class="box-text">
-				<div class="text-container">
-					<span>@Model?.Value("projectsBoxTitle1")</span>
-					<p>@Model?.Value("projectsBoxCategory1")</p>
+			<a href="/annualreport">
+				<div class="box-text">
+					<div class="text-container">
+						<span>@Model?.Value("projectsBoxTitle1")</span>
+						<p>@Model?.Value("projectsBoxCategory1")</p>
+					</div>
+					<div>
+						<i class="fa-solid fa-arrow-right"></i>
+					</div>
 				</div>
-				<div>
-					<i class="fa-solid fa-arrow-right"></i>
-				</div>
-			</div>
+			</a>
 		</div>
-
 		<div class="box">
 			<img src="@boxImage2" />
 			<div class="box-text">

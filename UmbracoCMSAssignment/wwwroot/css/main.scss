@@ -67,12 +67,17 @@
             a {
                 color: #5e6562;
                 font-weight: bold;
+                text-decoration: none;
 
 
                 &:hover {
                     opacity: 0.75;
                     cursor: pointer;
                 }
+            }
+
+            .active {
+                color: #D9C3A9;
             }
         }
 
@@ -267,6 +272,7 @@
 #section-our-services {
     background-color: #EAEAEA;
     padding-bottom: 5rem;
+
     .container {
         display: flex;
         flex-direction: column;
@@ -298,6 +304,15 @@
                 flex: 1;
                 border: solid 1px lightgray;
 
+                a {
+                    text-decoration: none;
+                    color: #4F5955;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
                 h3 {
                     color: #4F5955;
                     padding: 1rem 1.5rem;
@@ -306,6 +321,7 @@
 
                 p {
                     padding: 1.5rem 2rem;
+                    color: black;
                 }
             }
         }

@@ -43,6 +43,7 @@
 
 #section-projects-list {
     margin-bottom: 7rem;
+
     .container {
         display: flex;
         justify-content: space-between;
@@ -69,6 +70,14 @@
                 }
 
                 .project-text {
+                    a {
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
                     h4 {
                         color: #4F5955;
                         font-weight: 600;
@@ -130,7 +139,7 @@
                         border-radius: 50%;
                     }
 
-                    &:hover{
+                    &:hover {
                         cursor: pointer;
                         text-decoration: underline;
                     }

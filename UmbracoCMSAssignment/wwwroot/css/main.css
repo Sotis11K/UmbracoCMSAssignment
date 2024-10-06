@@ -52,10 +52,14 @@
 #section-header-bottom .header-bottom .navigation-links a {
   color: #5e6562;
   font-weight: bold;
+  text-decoration: none;
 }
 #section-header-bottom .header-bottom .navigation-links a:hover {
   opacity: 0.75;
   cursor: pointer;
+}
+#section-header-bottom .header-bottom .navigation-links .active {
+  color: #D9C3A9;
 }
 #section-header-bottom .header-bottom .search i {
   color: #5e6562;
@@ -227,6 +231,13 @@
   flex: 1;
   border: solid 1px lightgray;
 }
+#section-our-services .container .service-grid .service a {
+  text-decoration: none;
+  color: #4F5955;
+}
+#section-our-services .container .service-grid .service a:hover {
+  text-decoration: underline;
+}
 #section-our-services .container .service-grid .service h3 {
   color: #4F5955;
   padding: 1rem 1.5rem;
@@ -234,6 +245,7 @@
 }
 #section-our-services .container .service-grid .service p {
   padding: 1.5rem 2rem;
+  color: black;
 }
 
 #section-statistics .container {
